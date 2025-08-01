@@ -2,13 +2,6 @@ import streamlit as st
 import PyPDF2
 from groq import Groq
 
-<<<<<<< HEAD
-# 🔐 Hardcoded Groq API key (you can still load from .env for security)
-# IMPORTANT: For deployment, use st.secrets["GROQ_API_KEY"] instead of hardcoding!
-
-# Get API key securely
-API_KEY = st.secrets["groq"]["api_key"]
-=======
 # --- Streamlit Secrets for API Key ---
 try:
     API_KEY = st.secrets["groq"]["api_key"]
@@ -16,7 +9,6 @@ except (KeyError, st.errors.MissingSecretsError):
     st.error("⚠️ **Error:** Groq API key is missing from Streamlit secrets.")
     st.info("Please add your Groq API key to your Streamlit secrets.toml file.")
     st.stop() # Stop the app if the key is not available
->>>>>>> 3c3f9e1 (Saving changes before pulling)
 
 # --- Page Configuration ---
 st.set_page_config(
