@@ -8,7 +8,6 @@ import time # For simulating loading times and showing animations
 
 # Get API key securely
 API_KEY = st.secrets["groq"]["api_key"]
-st.write("Secrets loaded:", st.secrets) 
 
 # --- Page Configuration ---
 st.set_page_config(
